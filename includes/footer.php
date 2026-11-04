@@ -1,6 +1,6 @@
 
-<footer>
-    <p>PC Vault © 2026 - ZK - Programación Web II</p>
+<footer class="pie-pagina">
+    <p>PC Vault © 2026 - Programacion Web II</p>
 </footer>
 
 </body>
