@@ -1,29 +1,20 @@
 
 <?php
-$nombreSitio = "PC Vault";
+require __DIR__ . "/includes/header.php";
 ?>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $nombreSitio ?></title>
-</head>
-<body>
 
-    <header>
-        <h1><?= $nombreSitio ?></h1>
-        <p>Catálogo de videojuegos AAA para PC</p>
-    </header>
+<main>
+    <section>
+        <h2>Descubrí los mejores juegos AAA para PC</h2>
+        <p>Explorá nuestro catálogo de videojuegos.</p>
+    </section>
 
-    <main>
-        <h2>Bienvenido a PC Vault</h2>
-        <p>Próximamente: catálogo de juegos.</p>
-    </main>
+    <section>
+        <h2>Catálogo de juegos</h2>
+        <p>Próximamente estarán disponibles los 20 juegos.</p>
+    </section>
+</main>
 
-    <footer>
-        <p>PC Vault - Programación Web II - 2026</p>
-    </footer>
-
-</body>
-</html>
+<?php
+require __DIR__ . "/includes/footer.php";
+?>
