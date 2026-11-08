@@ -1,6 +1,7 @@
 
 <?php
 $ruta = $ruta ?? "";
+$pagina = $pagina ?? "inicio";
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -20,8 +21,19 @@ $ruta = $ruta ?? "";
         </a>
 
         <nav class="navegacion">
-            <a href="<?= $ruta ?>index.php" class="enlace-activo">Inicio</a>
-            <a href="<?= $ruta ?>index.php#catalogo">Catalogo</a>
+            <a href="<?= $ruta ?>index.php"
+               class="<?= $pagina === 'inicio' ? 'enlace-activo' : '' ?>">
+                Inicio
+            </a>
+
+            <a href="<?= $ruta ?>index.php#catalogo">
+                Catalogo
+            </a>
+
+            <a href="<?= $ruta ?>admin/index.php"
+               class="<?= $pagina === 'admin' ? 'enlace-activo' : '' ?>">
+                Administracion
+            </a>
         </nav>
     </div>
 </header>
