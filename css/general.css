@@ -468,7 +468,6 @@ a {
     }
 }
 
-
 /* Panel de administracion */
 
 .admin-seccion {
@@ -630,4 +629,107 @@ a {
     .navegacion a {
         font-size: 12px;
     }
+}
+
+/* Acciones del panel de administracion */
+
+.admin-acciones {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.admin-form-eliminar {
+    margin: 0;
+}
+
+.accion-editar,
+.accion-eliminar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    padding: 8px 13px;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.accion-editar {
+    color: #c4b5fd;
+    background: #352853;
+    border: 1px solid #534078;
+}
+
+.accion-editar:hover {
+    background: #4c3975;
+}
+
+.accion-eliminar {
+    color: #fca5a5;
+    background: #422126;
+    border: 1px solid #71363e;
+}
+
+.accion-eliminar:hover {
+    background: #643039;
+}
+
+@media (max-width: 600px) {
+    .admin-acciones {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* Botones de acciones CRUD */
+
+.admin-acciones {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-form-eliminar {
+    margin: 0;
+}
+
+.admin-acciones .accion-editar,
+.admin-acciones .accion-eliminar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 15px;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.admin-acciones .accion-editar {
+    background: #352853;
+    color: #c4b5fd;
+    border: 1px solid #534078;
+}
+
+.admin-acciones .accion-editar:hover {
+    background: #554080;
+}
+
+.admin-acciones .accion-eliminar {
+    background: #422126;
+    color: #fca5a5;
+    border: 1px solid #71363e;
+}
+
+.admin-acciones .accion-eliminar:hover {
+    background: #643039;
 }
