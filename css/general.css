@@ -2,12 +2,14 @@
 /* Configuracion general */
 
 :root {
-    --fondo: #101014;
-    --superficie: #1c1c24;
-    --texto: #f5f5f7;
-    --secundario: #9a9aa5;
-    --acento: #8b5cf6;
-    --borde: #2b2b36;
+    --fondo: #191718;
+    --superficie: #282325;
+    --texto: #f5f0ef;
+    --secundario: #b5a7a8;
+    --acento: #f59794;
+    --acento-hover: #ffb5b0;
+    --sobre-acento: #271b1d;
+    --borde: #403639;
 }
 
 * {
@@ -41,7 +43,7 @@ a {
 /* Encabezado */
 
 .cabecera {
-    background: #18181f;
+    background: #211d1f;
     border-bottom: 1px solid var(--borde);
 }
 
@@ -67,6 +69,7 @@ a {
     width: 36px;
     height: 36px;
     background: var(--acento);
+    color: var(--sobre-acento);
     border-radius: 9px;
 }
 
@@ -76,7 +79,9 @@ a {
 
 .navegacion {
     display: flex;
-    gap: 32px;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .navegacion a {
@@ -101,7 +106,7 @@ a {
     margin: 42px 0 65px;
     padding: 50px 65px;
     border-radius: 18px;
-    background: linear-gradient(115deg, #272040, #14141e 75%);
+    background: linear-gradient(115deg, #3b2c30, #211b1e 75%);
     overflow: hidden;
 }
 
@@ -111,7 +116,7 @@ a {
 
 .etiqueta {
     display: block;
-    color: #bba3ff;
+    color: #ffb5b0;
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 2px;
@@ -125,11 +130,11 @@ a {
 }
 
 .hero h1 span {
-    color: #ab8dfb;
+    color: #f59794;
 }
 
 .hero p {
-    color: #c4c1d0;
+    color: #dac8ca;
     font-size: 15px;
     line-height: 1.8;
     margin-bottom: 30px;
@@ -139,7 +144,7 @@ a {
     display: inline-block;
     padding: 14px 26px;
     background: var(--acento);
-    color: white;
+    color: var(--sobre-acento);
     border-radius: 8px;
     font-size: 14px;
     font-weight: bold;
@@ -147,7 +152,7 @@ a {
 }
 
 .boton-principal:hover {
-    background: #a78bfa;
+    background: var(--acento-hover);
 }
 
 .hero-imagen {
@@ -330,7 +335,7 @@ a {
     width: 100%;
     aspect-ratio: 2 / 3;
     padding: 20px;
-    background: linear-gradient(145deg, #30264d, #171720);
+    background: linear-gradient(145deg, #413034, #241d20);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -340,7 +345,7 @@ a {
 }
 
 .portada-pendiente span {
-    color: #ab8dfb;
+    color: #f59794;
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 3px;
@@ -397,7 +402,7 @@ a {
     width: 100%;
     height: 43px;
     padding: 0 12px;
-    background: #111118;
+    background: #211d1e;
     color: var(--texto);
     border: 1px solid var(--borde);
     border-radius: 7px;
@@ -415,7 +420,7 @@ a {
     height: 43px;
     padding: 0 20px;
     background: var(--acento);
-    color: white;
+    color: var(--sobre-acento);
     border: none;
     border-radius: 7px;
     font-weight: bold;
@@ -423,7 +428,7 @@ a {
 }
 
 .boton-filtrar:hover {
-    background: #a78bfa;
+    background: var(--acento-hover);
 }
 
 .boton-limpiar {
@@ -525,7 +530,7 @@ a {
 }
 
 .admin-tabla tbody tr:hover {
-    background: #282833;
+    background: #332c2e;
 }
 
 .admin-tabla tbody tr:last-child td {
@@ -582,7 +587,7 @@ a {
 .campo-admin textarea {
     width: 100%;
     padding: 12px 14px;
-    background: #111118;
+    background: #211d1e;
     border: 1px solid var(--borde);
     border-radius: 7px;
     color: var(--texto);
@@ -631,62 +636,6 @@ a {
     }
 }
 
-/* Acciones del panel de administracion */
-
-.admin-acciones {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.admin-form-eliminar {
-    margin: 0;
-}
-
-.accion-editar,
-.accion-eliminar {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 34px;
-    padding: 8px 13px;
-    border-radius: 6px;
-    font-family: inherit;
-    font-size: 12px;
-    font-weight: 600;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.accion-editar {
-    color: #c4b5fd;
-    background: #352853;
-    border: 1px solid #534078;
-}
-
-.accion-editar:hover {
-    background: #4c3975;
-}
-
-.accion-eliminar {
-    color: #fca5a5;
-    background: #422126;
-    border: 1px solid #71363e;
-}
-
-.accion-eliminar:hover {
-    background: #643039;
-}
-
-@media (max-width: 600px) {
-    .admin-acciones {
-        flex-direction: column;
-        align-items: stretch;
-    }
-}
-
 /* Botones de acciones CRUD */
 
 .admin-acciones {
@@ -715,13 +664,13 @@ a {
 }
 
 .admin-acciones .accion-editar {
-    background: #352853;
-    color: #c4b5fd;
-    border: 1px solid #534078;
+    background: #493237;
+    color: #ffd5cf;
+    border: 1px solid #765458;
 }
 
 .admin-acciones .accion-editar:hover {
-    background: #554080;
+    background: #634147;
 }
 
 .admin-acciones .accion-eliminar {
@@ -761,22 +710,18 @@ a {
     border-color: var(--acento);
 }
 
-.navegacion {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
 
 /* Tema claro */
 
 html[data-tema="claro"] {
-    --fondo: #f4f5fa;
+    --fondo: #f9f6f4;
     --superficie: #ffffff;
-    --texto: #191924;
-    --secundario: #626779;
-    --borde: #dcdfea;
-    --acento: #7947df;
+    --texto: #292123;
+    --secundario: #74676a;
+    --borde: #e7d9d8;
+    --acento: #b34c50;
+    --acento-hover: #993c43;
+    --sobre-acento: #ffffff;
 
     color-scheme: light;
 }
@@ -804,15 +749,27 @@ html[data-tema="claro"] .navegacion .enlace-activo {
 html[data-tema="claro"] .hero {
     background: linear-gradient(
         120deg,
-        #e5ddff,
-        #f6f3ff 65%,
-        #eceaf7
+        #f9e0dd,
+        #fff5f2 65%,
+        #f6e7e4
     );
 }
 
 html[data-tema="claro"] .hero h1,
 html[data-tema="claro"] .hero p {
     color: var(--texto);
+}
+
+html[data-tema="claro"] .hero h1 span {
+    color: #ae4b50;
+}
+
+html[data-tema="claro"] .etiqueta {
+    color: #a54349;
+}
+
+html[data-tema="claro"] .juego-rating {
+    color: #966500;
 }
 
 html[data-tema="claro"] .tarjeta-juego,
@@ -828,7 +785,7 @@ html[data-tema="claro"] .campo-filtro select,
 html[data-tema="claro"] .campo-admin input,
 html[data-tema="claro"] .campo-admin select,
 html[data-tema="claro"] .campo-admin textarea {
-    background: #f8f9fc;
+    background: #fcf8f6;
     color: var(--texto);
     border-color: var(--borde);
 }
@@ -839,14 +796,14 @@ html[data-tema="claro"] .admin-tabla td {
 }
 
 html[data-tema="claro"] .admin-tabla tbody tr:hover {
-    background: #f1edfc;
+    background: #f9e9e6;
 }
 
 html[data-tema="claro"] .portada-pendiente {
     background: linear-gradient(
         145deg,
-        #ded5fc,
-        #eeeaf9
+        #f2d9d6,
+        #faece8
     );
 }
 
@@ -861,8 +818,8 @@ html[data-tema="claro"] .boton-limpiar {
 }
 
 html[data-tema="claro"] .accion-editar {
-    background: #e8dfff;
-    color: #5935a7;
+    background: #f8dfdc;
+    color: #933f45;
 }
 
 html[data-tema="claro"] .accion-eliminar {
