@@ -1,13 +1,31 @@
 
 <?php
 
-// Configuracion de la base de datos local
-$host = "localhost";
-$usuario = "root";
-$contrasena = "";
-$baseDatos = "pc_vault";
+// Conexion local o del hosting
+$servidor = $_SERVER["SERVER_NAME"] ?? "localhost";
+
+if ($servidor === "localhost" || $servidor === "127.0.0.1") {
+
+    // Configuracion de XAMPP
+    $host = "localhost";
+    $usuario = "root";
+    $contrasena = "";
+    $baseDatos = "pc_vault";
+
+} else {
+
+    // Configuracion privada de InfinityFree
+    $config = require __DIR__ . "/config-hosting.php";
+
+    $host = $config["host"];
+    $usuario = $config["usuario"];
+    $contrasena = $config["contrasena"];
+    $baseDatos = $config["baseDatos"];
+}
 
 try {
+    mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
     $conexion = new mysqli(
         $host,
         $usuario,

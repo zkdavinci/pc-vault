@@ -2,3 +2,4 @@
 .env
 config/local.php
 .vscode/
+/includes/config-hosting.php
