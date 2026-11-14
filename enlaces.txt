@@ -1,0 +1,13 @@
+
+Segundo Parcial - Programacion Web II
+Proyecto: PC Vault
+Opcion B: Panel de administracion y CRUD
+
+Repositorio GitHub:
+https://github.com/zkdavinci/pc-vault
+
+Sitio web en InfinityFree:
+https://pcvault.infinityfreeapp.com/
+
+Panel de administracion:
+https://pcvault.infinityfreeapp.com/admin/
